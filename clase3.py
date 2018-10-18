@@ -1,11 +1,11 @@
 import unittest
 import random
-
+import math
 
 import matplotlib.pyplot as plt
 from numpy.random import rand
 
-class Perceptron:
+class SigmoidNeuron:
 
 	def __init__(self,w=[],b=0):
 		self.weights=w
@@ -18,63 +18,72 @@ class Perceptron:
 		self.weights = w
 		self.bias = random.uniform(-2.0, 2.0)
 
-
 	def feed(self,x):
-		res =0.0
+		summ = 0.0
 		for i,w in enumerate(self.weights):
-			res+= w*x[i]
-		return (res+self.bias) >= 0
+			summ+= w*x[i]
+
+		z = -summ -self.bias
+		exp =0.0
+		if(z<-700):
+			exp = 0.0
+		elif(z>700):
+			exp = 1.0
+		else:
+			exp = math.exp(z)
+		res = 1.0 / (1.0 + exp )
+		return res > 0.8
 
 
-
+'''
 class TestPerceptron(unittest.TestCase):
 
 	def test_or(self):
 		w = [1.0,1.0]
 		b = -0.5
-		p = Perceptron(w,b)
+		sn = SigmoidNeuron(w, b)
 
 		for i in range(0,2):
 			for j in range(0,2):
 				x=[i,j]
 				real = i or j
-				result = p.feed(x)
+				result = sn.feed(x)
 				self.assertEqual(real, result)	#print(x,"\t",result)
 
 
 	def test_and(self):
 		w = [1.0,1.0]
 		b = -1.5
-		p = Perceptron(w,b)
+		sn = SigmoidNeuron(w, b)
 
 		for i in range(0,2):
 			for j in range(0,2):
 				x=[i,j]
 				real = i and j
-				result = p.feed(x)
+				result = sn.feed(x)
 				self.assertEqual(real, result)
 
 	def test_not(self):
 		w = [-1.0]
 		b = 0.5
-		p = Perceptron(w,b)
+		sn = SigmoidNeuron(w, b)
 
 		for i in range(0,2):
 			x=[i]
 			real = not i
-			result = p.feed(x)
+			result = sn.feed(x)
 			self.assertEqual(real, result)
 
 	def test_nand(self):
 		w = [-2.0,-2.0]
 		b = 3
-		p = Perceptron(w,b)
+		sn = SigmoidNeuron(w, b)
 
 		for i in range(0,2):
 			for j in range(0,2):
 				x=[i,j]
 				real = not(i and j)
-				result = p.feed(x)
+				result = sn.feed(x)
 				self.assertEqual(real, result)
 
 	def test_sum(self):
@@ -88,20 +97,20 @@ class TestPerceptron(unittest.TestCase):
 
 				self.assertEqual(real_summ, res_summ)
 				self.assertEqual(real_carr, res_carr)
-
+'''
 
 
 def sum_nand(x1,x2):
 	w = [-2.0,-2.0]
 	b = 3
-	p = Perceptron(w,b)
+	sn = SigmoidNeuron(w, b)
 
-	r0 = p.feed([x1,x2])
-	r1 = p.feed([x1,r0])
-	r2 = p.feed([r0,x2])
+	r0 = sn.feed([x1,x2])
+	r1 = sn.feed([x1,r0])
+	r2 = sn.feed([r0,x2])
 
-	summ = p.feed([r1,r2]) +0
-	carr = p.feed([r0,r0]) +0
+	summ = sn.feed([r1,r2]) +0
+	carr = sn.feed([r0,r0]) +0
 
 	return summ, carr
 
@@ -141,9 +150,8 @@ def learn_2DLine():
 	trainings= 50
 	lr=0.1
 
-	p = Perceptron()
-	p.mrand(2)
-
+	sn = SigmoidNeuron()
+	sn.mrand(2)
 
 	for i in range(0,trainings):
 
@@ -151,15 +159,15 @@ def learn_2DLine():
 		x,dOutput = realVal_2DLine(size)
 
 		if (i % 10 == 0):
-			plot_learned_2DLine(p, size, x, i.__str__() + " trainings")
+			plot_learned_2DLine(sn, size, x, i.__str__() + " trainings")
 
 
 		for j in range(0, size):
-			rOutput = p.feed(x[j])
+			rOutput = sn.feed(x[j])
 			diff =  dOutput[j] - rOutput
 
 			for k in range(0, 2):
-				p.weights[k] += (lr*diff*x[j][k])
+				sn.weights[k] += (lr*diff*x[j][k])
 
 			if(diff==0):
 				success+=1.0
@@ -167,12 +175,12 @@ def learn_2DLine():
 		if (i % 10 == 0):
 			ratio= success/(size+0.0)
 			print(i,"\t",ratio)
-	return p
+	return sn
 
 
 
 
-p = learn_2DLine()
+sn = learn_2DLine()
 
 '''
 if __name__ == '__main__':
