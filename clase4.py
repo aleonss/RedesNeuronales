@@ -5,8 +5,6 @@ import numpy as np
 
 import matplotlib.pyplot as plt
 
-
-
 class SigmoidNeuron:
 
 	def __init__(self,w=[],b=0):
@@ -20,21 +18,12 @@ class SigmoidNeuron:
 		self.weights = w
 		self.bias = random.uniform(-2.0, 2.0)
 
+
 	def feed(self,x):
 		summ = 0.0
 		for i,w in enumerate(self.weights):
 			summ+= w*x[i]
-
-		z = -summ -self.bias
-		exp =0.0
-		if(z<-700):
-			exp = 0.0
-		elif(z>700):
-			exp = 1.0
-		else:
-			exp = math.exp(z)
-		res = 1.0 / (1.0 + exp )
-		return res
+		return 1.0 / (1.0 + np.exp(-summ -self.bias) )
 
 	def upgrade_wb(self, delta, input, rate):
 		for j, w in enumerate(self.weights):
@@ -56,7 +45,7 @@ class NeuronLayer:
 		for n in self.neurons:
 			res.append(n.feed(x))
 		return res
-
+	'''
 	def error_backpropagation(self,delta,output,nweight):
 		ndelta=[]
 		for i,n in enumerate(self.neurons):
@@ -66,12 +55,10 @@ class NeuronLayer:
 			nd=ne*(output[i] * (1.0 - output[i]))			# o=np.multiply(output,(1.0 -output), dtype=np.float64)
 			ndelta.append(nd)
 		return ndelta
+	'''
 
 	def upgrade_wb(self, delta, input, rate):
 		for i,n in enumerate(self.neurons):
-			#for j,w in enumerate(n.weights):
-			#	self.neurons[i].weights[j] += (rate * delta[i]*input[j])
-			#self.neurons[i].bias += (rate*delta[i])
 			self.neurons[i].upgrade_wb(delta[i], input, rate)
 		return self.feed(input)
 
@@ -82,6 +69,11 @@ class NeuronLayer:
 			res.append(n.weights)
 		return res
 
+	def get_bias(self):
+		res = []
+		for n in self.neurons:
+			res.append(n.bias)
+		return res
 
 
 
@@ -92,14 +84,38 @@ class NeuralNetwork:
 		self.layers=layers
 
 	def forward_feeding(self,input):
-		res = []
-		outputs = []
+		res = outputs =[]
 		x = input
 		for i,l in enumerate(self.layers):
 			res = l.feed(x)
 			outputs.append(res)
 			x = res
 		return res, outputs
+
+	'''
+	def error_backpropagation2(self, outputs, expected_output):
+		n_layers = self.layers.__len__()
+		output = outputs[outputs.__len__()-1]
+		output_layer = self.layers[n_layers-1]
+		error=[]
+		delta=[]
+		deltam=[]
+		for i,n in enumerate(output_layer.neurons):
+			e=(expected_output[i] - output[i])
+			d = e*(output[i] * (1.0 - output[i]))
+			error.append(e)
+			delta.append(d)
+		deltam.append(delta)
+		for i in range(2, n_layers):
+			print(n_layers - i)
+			l = self.layers[n_layers - i]
+			nl = self.layers[n_layers - i + 1]
+			loutput = outputs[n_layers - i]
+			nweight = nl.get_weight()
+			delta = l.error_backpropagation(delta, loutput, nweight)
+			deltam.append(delta)
+		return deltam[::-1]
+	'''
 
 	def error_backpropagation(self, outputs, expected_output):
 
@@ -111,37 +127,62 @@ class NeuralNetwork:
 		delta=[]
 		deltam=[]
 
-		for i,n in enumerate(output_layer.neurons):
-			#print("eo ,ro: ",expected_output[i],", ",output[i])
-			e=(expected_output[i] - output[i])
-			d = e*(output[i] * (1.0 - output[i]))					#d = e* transferDerivative(output[i])
-			#print("err ",e)
-			#print("d ",d)
+		#print("outputs",outputs)
+		#print("weights",self.get_weight())
 
+		for i,n in enumerate(output_layer.neurons):
+			e=(expected_output[i] - output[i])
+			d = e*(output[i] * (1.0 - output[i]))
 			error.append(e)
 			delta.append(d)
 
 		deltam.append(delta)
+		#print("o ",n_layers-1)
+		#print(self.get_weight())
 
-		for i in range(2,n_layers):
-			l = self.layers[n_layers-i]
-			nl = self.layers[n_layers-i +1]
-			loutput = outputs[n_layers-i]
+		for i in range(2,n_layers+1):
+			il = n_layers -i
+			inl = n_layers -i +1
+			#print("l ",il,"\tnl",inl)
+
+			ndelta= delta
+			delta = []
+			l = self.layers[il]
+			nl = self.layers[inl]
+			loutput = outputs[il]
 			nweight = nl.get_weight()
-			delta = l.error_backpropagation(delta,loutput,nweight)
+
+			for i, n in enumerate(l.neurons):
+				#print(nweight,ndelta)
+				e = 0.0
+				for j,w in enumerate(nweight) :
+					for w in nweight[j]:
+						e += w * ndelta[j]
+				d = e * (loutput[i] * (1.0 - loutput[i]))
+				error.append(e)
+				delta.append(d)
 			deltam.append(delta)
 
 		return deltam[::-1]
 
-	def upgrade_wb(self, deltam, input, learn_rate):
-		n_layers = self.layers.__len__()
-		#print(input)
 
-		for i,l in enumerate(self.layers[1:]):
-			input=l.upgrade_wb(deltam[i], input, learn_rate)
-			#print(input)
+	def upgrade_wb(self, deltam, input, learn_rate, outputs):
+		for i,l in enumerate(self.layers):
+			l.upgrade_wb(deltam[i], input, learn_rate)
+			input = outputs[i]
 
 
+	def get_weight(self):
+		res = []
+		for l in self.layers:
+			res.append(l.get_weight())
+		return res
+
+	def get_bias(self):
+		res = []
+		for l in self.layers:
+			res.append(l.get_bias())
+		return res
 
 
 
@@ -161,24 +202,6 @@ def realVal_2DLine(n_input):
 
 	return inputs,results
 
-
-def plot_learned_2DLine(p,n_input,x,title):
-	fig, ax = plt.subplots()
-	color = ['red', 'blue']
-
-	for j in range(0, n_input):
-		rOutput = p.feed(x[j])
-		c = rOutput
-		xx = x[j][0]
-		yy = x[j][1]
-		scale = 20
-		ax.scatter(xx, yy, c=color[c], s=scale, alpha=0.5, edgecolors='none')
-
-	plt.title(title)
-	plt.show()
-
-
-
 def plot_deep_2DLine(nn,n_input,x,title):
 	fig, ax = plt.subplots()
 	color = ['red', 'blue']
@@ -197,115 +220,137 @@ def plot_deep_2DLine(nn,n_input,x,title):
 	plt.title(title)
 	plt.show()
 
-
-
-
-def learn_2DLine():
-	size = 1000
-	trainings= 50
-	lr=0.1
-
-	sn = SigmoidNeuron()
-	sn.mrand(2)
-
-
-	for i in range(0,trainings):
-
-		success=0.0
-		x,dOutput = realVal_2DLine(size)
-		print("x",x)
-
-		#if (i % 10 == 0):
-		#	plot_learned_2DLine(sn, size, x, i.__str__() + " trainings")
-
-
-		for j in range(0, size):
-			rOutput = sn.feed(x[j])
-			#print("rOut",rOutput)
-			diff =  dOutput[j] - rOutput
-
-			for k in range(0, 2):
-				sn.weights[k] += (lr*diff*x[j][k])
-
-			if(diff==0):
-				success+=1.0
-
-		if (i % 10 == 0):
-			ratio= success/(size+0.0)
-			print(i,"\t",ratio)
-
-
-
-
-
-#layer(size/n input, n neurons)
-
+'''
+#layer(size/n input x neu, n neurons)
 def learn_deep():
-	size = 1000
-	trainings= 500
+	size = 100
+	trainings= 10000
 	learn_rate = 0.5
 	layers = [
-		NeuronLayer(0, 2),
-		NeuronLayer(2, 3),
-		NeuronLayer(3, 4),
-		NeuronLayer(4, 1),
+
+		NeuronLayer(2, 1),
 	]
 	nn = NeuralNetwork(layers)
 
+	success = 0.0
+
 	for i in range(0,trainings):
 
-		success=0.0
 		x,dOutput = realVal_2DLine(size)
-		#print("x",x)
-		if (i % 10 == 0):
-			plot_deep_2DLine(nn, size, x, i.__str__() + " trainings")
-
-		for j in range(0, size):
-			res,outputs = nn.forward_feeding(x[j])
-			print(dOutput[j],"\t",res[0],)
+		if (i % 100 == 0):
+			ratio= int(100*(success/(size+0.0)))
+			plot_deep_2DLine(nn, size, x, i.__str__() + " trainings / "+ratio.__str__()+"%")
+		success=0.0
 
 		for j in range(0, size):
 
 			res,outputs = nn.forward_feeding(x[j])
-			print(res)
 			deltam=nn.error_backpropagation(outputs,dOutput)
-			nn.upgrade_wb(deltam,x[j],learn_rate)
+			nn.upgrade_wb(deltam,x[j],learn_rate,outputs)
 
-			diff = abs(dOutput[j]-res[0])
-			success+= (1.0 - diff)
+			diff = dOutput[j]-res[0]
+			success += (1.0 - abs(diff))
 
-		if (i % 10 == 0):
-			ratio= success/(size+0.0)
-			print(i,"\t",ratio)
 
-learn_deep()
+		#print(nn.layers[0].neurons[0].bias)
+		#print(nn.layers[0].neurons[0].weights[0])
+		if (i % 50 == 0):
+			ratio= int(100*(success/(size+0.0)))
+			print(i,"\t",ratio,"%")
 
 '''
-learn_2DLine()
-learn_deep()
+
+def learn_or():
+	size = 4
+	trainings= 1000
+	learn_rate = 0.4
+	layers = [
+		NeuronLayer(2, 2),
+		NeuronLayer(2, 2),
+		NeuronLayer(2, 1),
+	]
+	nn = NeuralNetwork(layers)
+
+	for t in range(0,trainings):
+		success = 0.0
+
+		for i in range(0,2):
+			for j in range(0,2):
+				x=[i,j]
+				real = i or j
+
+				res, outputs = nn.forward_feeding(x)
+				#print(outputs)
+				deltam = nn.error_backpropagation(outputs, [real])
+				nn.upgrade_wb(deltam, x, learn_rate,outputs)
+
+				result = res[0] > 0.5
+				success += (1.0 - abs(real - result))
+
+				#print(nn.layers[0].neurons[0].bias)
+				#print(nn.layers[0].neurons[0].weights[0])
+
+		if (t % 10 == 0):
+			ratio= (success/(size+0.0))
+			print(t,"\t",ratio)
+
+	return nn
 
 
-trainings = 50
-learn_rate = 0.5
-layers = [
-	NeuronLayer(0, 5),
-	NeuronLayer(5, 3),
-	NeuronLayer(3, 4),
-	NeuronLayer(4, 1),
-]
-nn = NeuralNetwork(layers)
+def learn_line():
+	size = 4
+	trainings= 1000
+	learn_rate = 0.4
+	layers = [
+		NeuronLayer(2, 5),
+		NeuronLayer(5, 2),
+		NeuronLayer(2, 1),
+	]
+	nn = NeuralNetwork(layers)
 
-input = [0.5, 1.0, 0.5, 0.5, 0.0]
-expected_output = [0.5]
+	success = 0.0
+	for t in range(0,trainings):
+		xx= random.uniform(-50.0, 50.0)+0.0
+		xy= random.uniform(-50.0, 50.0)
 
-res, outputs = nn.forward_feeding(input)
-deltam = nn.error_backpropagation(outputs, expected_output)
-nn.upgrade_wb(deltam, input, learn_rate)
+		x = [xx,xy]
+		real = 0.0+xx<xy
+
+		res, outputs = nn.forward_feeding(x)
+		deltam = nn.error_backpropagation(outputs, [real])
+		nn.upgrade_wb(deltam, x, learn_rate, outputs)
+
+		success += (1.0 - abs(real - res[0]))
+		if (t % 100 == 0):
+			ratio= (success/100)
+			success=0.0
+			print(t,"\t",ratio)
+
+	return nn
+
+def test_line():
+	nn =learn_line()
+	print("weights:\t", nn.get_weight())
+	print("bias:   \t", nn.get_bias())
+
+	size=100
+	x, dOutput = realVal_2DLine(size)
+	plot_deep_2DLine(nn, size, x, "%")
 
 
+def test_or():
+	nn = learn_or()
+	print("weights:\t", nn.get_weight())
+	print("bias:   \t", nn.get_bias())
+	for i in range(0,2):
+		for j in range(0,2):
+			x=[i,j]
+			real = i or j
+			res, outputs = nn.forward_feeding(x)
+			result = res[0] > 0.5
+			print(x,"\treal:",real,"\tres:",result)
 
-learn_2DLine()
-if __name__ == '__main__':
-	learn_2DLine()
-	unittest.main()
-'''
+
+test_or()
+test_line()
+#learn_deep()

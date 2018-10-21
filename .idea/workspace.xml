@@ -2,11 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6779900a-43f4-4f2f-9a87-e61d2a074d39" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/clase3.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/RedesNeuronales.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/RedesNeuronales.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clase2.py" beforeDir="false" afterPath="$PROJECT_DIR$/clase2.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/clase3.py" beforeDir="false" afterPath="$PROJECT_DIR$/clase3.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clase4.py" beforeDir="false" afterPath="$PROJECT_DIR$/clase4.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,10 +13,14 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="CoverageDataManager">
-    <SUITE FILE_PATH="coverage/RedesNeuronales$Unittests_in_clase3_py.coverage" NAME="Unittests in clase3.py Coverage Results" MODIFIED="1539214481752" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/RedesNeuronales$clase4.coverage" NAME="clase4 Coverage Results" MODIFIED="1539809738168" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/RedesNeuronales$Unittests_in_clase3_py.coverage" NAME="Unittests in clase3.py Coverage Results" MODIFIED="1540073907632" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/RedesNeuronales$clase4.coverage" NAME="clase4 Coverage Results" MODIFIED="1540083954501" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/RedesNeuronales$Unittests_in_clase2_py.coverage" NAME="Unittests in clase2.py Coverage Results" MODIFIED="1539566788583" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/RedesNeuronales$clase3.coverage" NAME="clase3 Coverage Results" MODIFIED="1540069454494" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/RedesNeuronales$Unittests_in_clase1_py.coverage" NAME="Unittests in clase1.py Coverage Results" MODIFIED="1539407085849" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+  </component>
+  <component name="CoverageViewManager">
+    <option name="myElementSize" value="455" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -38,61 +40,67 @@
     <session id="946859397">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
-          <entry key="project.closed" value="6" />
+          <entry key="project.closed" value="9" />
           <entry key="project.open.time.0" value="1" />
-          <entry key="project.open.time.4" value="1" />
+          <entry key="project.open.time.4" value="2" />
           <entry key="project.open.time.5" value="2" />
-          <entry key="project.open.time.6" value="2" />
+          <entry key="project.open.time.6" value="4" />
           <entry key="project.open.time.7" value="1" />
-          <entry key="project.opened" value="7" />
+          <entry key="project.open.time.9" value="1" />
+          <entry key="project.opened" value="11" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="py" value="7" />
+          <entry key="pstat" value="8" />
+          <entry key="py" value="10" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Python" value="7" />
+          <entry key="Profiler Session" value="8" />
+          <entry key="Python" value="10" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="Python Console" value="2" />
           <entry key="clase3" value="15" />
-          <entry key="py" value="4142" />
+          <entry key="py" value="5791" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="4159" />
+          <entry key="Python" value="5808" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/clase4.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="623">
-              <caret line="264" column="32" selection-start-line="264" selection-start-column="32" selection-end-line="264" selection-end-column="32" />
+            <state relative-caret-position="4041">
+              <caret line="221" selection-start-line="221" selection-end-line="221" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
-                <marker date="1539809738164" expanded="true" signature="95:97" ph="..." />
+                <element signature="e#4685#5444#0" />
+                <marker date="1540083954498" expanded="true" signature="6775:6952" ph="..." />
+                <marker date="1540083954498" expanded="true" signature="6966:6968" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/clase3.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="96">
-              <caret line="9" selection-start-line="9" selection-end-line="18" selection-end-column="45" />
+            <state relative-caret-position="-1218">
+              <caret line="37" column="24" selection-start-line="37" selection-start-column="24" selection-end-line="37" selection-end-column="24" />
               <folding>
                 <element signature="e#0#15#0" expanded="true" />
+                <marker date="1540084080846" expanded="true" signature="2961:2964" ph="..." />
               </folding>
             </state>
           </provider>
@@ -101,22 +109,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/clase2.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="96">
-              <caret line="9" selection-start-line="9" selection-end-line="19" />
-              <folding>
-                <element signature="e#0#15#0" expanded="true" />
-                <marker date="1539566788577" expanded="true" signature="1803:2008" ph="..." />
-                <marker date="1539566788577" expanded="true" signature="2048:2314" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/clase1.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="3" column="17" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
+            <state>
+              <caret column="11" selection-end-line="1" />
             </state>
           </provider>
         </entry>
@@ -127,6 +121,7 @@
     <findStrings>
       <find>SigmoidNeuron(</find>
       <find>print(</find>
+      <find>print</find>
       <find>upgrade_wb</find>
     </findStrings>
   </component>
@@ -138,8 +133,8 @@
       <list>
         <option value="$PROJECT_DIR$/clase1.py" />
         <option value="$PROJECT_DIR$/clase2.py" />
-        <option value="$PROJECT_DIR$/clase3.py" />
         <option value="$PROJECT_DIR$/clase4.py" />
+        <option value="$PROJECT_DIR$/clase3.py" />
       </list>
     </option>
   </component>
@@ -149,11 +144,10 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="x" value="-54" />
-    <option name="y" value="120" />
-    <option name="width" value="1930" />
-    <option name="height" value="2114" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="47" />
+    <option name="width" value="1920" />
+    <option name="height" value="2000" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
@@ -198,7 +192,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.clase4">
+  <component name="RunManager" selected="Python.clase3">
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
       <module name="RedesNeuronales" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -225,9 +219,6 @@
       <module name="RedesNeuronales" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -319,11 +310,11 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.clase4" />
         <item itemvalue="Python.clase3" />
+        <item itemvalue="Python.clase4" />
+        <item itemvalue="Python tests.Unittests in clase3.py" />
         <item itemvalue="Python tests.Unittests in clase2.py" />
         <item itemvalue="Python tests.Unittests in clase1.py" />
-        <item itemvalue="Python tests.Unittests in clase3.py" />
       </list>
     </recent_temporary>
   </component>
@@ -341,62 +332,64 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unittests_in_clase1_py - 2018.10.13 at 02h 03m 42s.xml">
-      <configuration name="Unittests in clase1.py" configurationId="tests" />
+    <history-entry file="Unittests_in_clase3_py - 2018.10.20 at 19h 18m 13s.xml">
+      <configuration name="Unittests in clase3.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_clase1_py - 2018.10.13 at 02h 03m 46s.xml">
-      <configuration name="Unittests in clase1.py" configurationId="tests" />
+    <history-entry file="Unittests_in_clase3_py - 2018.10.20 at 19h 18m 18s.xml">
+      <configuration name="Unittests in clase3.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_clase1_py - 2018.10.13 at 02h 03m 50s.xml">
-      <configuration name="Unittests in clase1.py" configurationId="tests" />
+    <history-entry file="Unittests_in_clase3_py - 2018.10.20 at 19h 18m 19s.xml">
+      <configuration name="Unittests in clase3.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_clase1_py - 2018.10.13 at 02h 04m 46s.xml">
-      <configuration name="Unittests in clase1.py" configurationId="tests" />
+    <history-entry file="Unittests_in_clase3_py - 2018.10.20 at 19h 18m 20s.xml">
+      <configuration name="Unittests in clase3.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_clase2_py - 2018.10.14 at 22h 20m 26s.xml">
-      <configuration name="Unittests in clase2.py" configurationId="tests" />
+    <history-entry file="Unittests_in_clase3_py - 2018.10.20 at 19h 18m 21s.xml">
+      <configuration name="Unittests in clase3.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_clase2_py - 2018.10.14 at 22h 24m 25s.xml">
-      <configuration name="Unittests in clase2.py" configurationId="tests" />
+    <history-entry file="Unittests_in_clase3_py - 2018.10.20 at 19h 18m 22s.xml">
+      <configuration name="Unittests in clase3.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_clase2_py - 2018.10.14 at 22h 24m 52s.xml">
-      <configuration name="Unittests in clase2.py" configurationId="tests" />
+    <history-entry file="Unittests_in_clase3_py - 2018.10.20 at 19h 18m 23s.xml">
+      <configuration name="Unittests in clase3.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_clase2_py - 2018.10.14 at 22h 25m 46s.xml">
-      <configuration name="Unittests in clase2.py" configurationId="tests" />
+    <history-entry file="Unittests_in_clase3_py - 2018.10.20 at 19h 18m 24s.xml">
+      <configuration name="Unittests in clase3.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_clase2_py - 2018.10.14 at 22h 25m 58s.xml">
-      <configuration name="Unittests in clase2.py" configurationId="tests" />
+    <history-entry file="Unittests_in_clase3_py - 2018.10.20 at 19h 18m 25s.xml">
+      <configuration name="Unittests in clase3.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_clase2_py - 2018.10.14 at 22h 26m 36s.xml">
-      <configuration name="Unittests in clase2.py" configurationId="tests" />
+    <history-entry file="Unittests_in_clase3_py - 2018.10.20 at 19h 18m 27s.xml">
+      <configuration name="Unittests in clase3.py" configurationId="tests" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-54" y="120" width="1930" height="2114" extended-state="0" />
+    <frame x="-6" y="0" width="3852" height="2112" extended-state="6" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.15783784" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.08059385" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Message" order="0" />
-      <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.2954071" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39958376" />
-      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Version Control" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Database Changes" order="9" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
-      <window_info anchor="bottom" id="Terminal" order="11" weight="0.32985386" />
-      <window_info anchor="bottom" id="Python Console" order="12" weight="0.29708636" />
+      <window_info anchor="bottom" id="Concurrent Activities Diagram" order="0" weight="0.32967606" />
+      <window_info anchor="bottom" id="Message" order="1" />
+      <window_info anchor="bottom" id="Find" order="2" />
+      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.49945828" weight="0.2941484" />
+      <window_info anchor="bottom" id="Debug" order="4" weight="0.39916405" />
+      <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
+      <window_info anchor="bottom" id="TODO" order="7" />
+      <window_info anchor="bottom" id="Docker" order="8" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="9" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5005417" side_tool="true" weight="0.2941484" />
+      <window_info anchor="bottom" id="Terminal" order="12" weight="0.32985386" />
+      <window_info anchor="bottom" id="Python Console" order="13" visible="true" weight="0.29571578" />
+      <window_info anchor="right" id="Coverage" sideWeight="0.50407106" side_tool="true" weight="0.24151644" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info active="true" anchor="right" id="SciView" order="3" sideWeight="0.49947807" visible="true" weight="0.43405405" />
+      <window_info active="true" anchor="right" id="SciView" order="3" sideWeight="0.49592894" visible="true" weight="0.24151644" />
       <window_info anchor="right" id="Database" order="4" weight="0.3299025" />
-      <window_info anchor="right" x="0" y="0" width="428" height="1914" id="Documentation" order="5" sideWeight="0.5005219" side_tool="true" weight="0.43499458" />
+      <window_info anchor="right" x="0" y="0" width="428" height="1914" id="Documentation" order="5" sideWeight="0.50703186" side_tool="true" weight="0.556338" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -413,43 +406,48 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/clase1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="3" column="17" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$USER_HOME$/anaconda3/lib/python3.6/random.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="370">
+          <caret line="368" selection-start-line="368" selection-end-line="368" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/clase2.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="11" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/clase4.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="623">
-          <caret line="264" column="32" selection-start-line="264" selection-start-column="32" selection-end-line="264" selection-end-column="32" />
+        <state relative-caret-position="4041">
+          <caret line="221" selection-start-line="221" selection-end-line="221" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
-            <marker date="1539809738164" expanded="true" signature="95:97" ph="..." />
+            <element signature="e#4685#5444#0" />
+            <marker date="1540083954498" expanded="true" signature="6775:6952" ph="..." />
+            <marker date="1540083954498" expanded="true" signature="6966:6968" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/clase3.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="9" selection-start-line="9" selection-end-line="18" selection-end-column="45" />
+        <state relative-caret-position="-1218">
+          <caret line="37" column="24" selection-start-line="37" selection-start-column="24" selection-end-line="37" selection-end-column="24" />
           <folding>
             <element signature="e#0#15#0" expanded="true" />
+            <marker date="1540084080846" expanded="true" signature="2961:2964" ph="..." />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/clase2.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="96">
-          <caret line="9" selection-start-line="9" selection-end-line="19" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-            <marker date="1539566788577" expanded="true" signature="1803:2008" ph="..." />
-            <marker date="1539566788577" expanded="true" signature="2048:2314" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/clase1.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="3" column="17" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
         </state>
       </provider>
     </entry>

@@ -4,6 +4,8 @@ import math
 
 import matplotlib.pyplot as plt
 from numpy.random import rand
+import numpy as np
+
 
 class SigmoidNeuron:
 
@@ -22,35 +24,53 @@ class SigmoidNeuron:
 		summ = 0.0
 		for i,w in enumerate(self.weights):
 			summ+= w*x[i]
-
-		z = -summ -self.bias
-		exp =0.0
-		if(z<-700):
-			exp = 0.0
-		elif(z>700):
-			exp = 1.0
-		else:
-			exp = math.exp(z)
-		res = 1.0 / (1.0 + exp )
-		return res > 0.8
+		res = 1.0 / (1.0 + np.exp(-summ -self.bias) )
+		return res
 
 
-'''
+
+
+
+
 class TestPerceptron(unittest.TestCase):
 
-	def test_or(self):
-		w = [1.0,1.0]
-		b = -0.5
-		sn = SigmoidNeuron(w, b)
+	def learn_or(self):
+		trainings = 1000
+		lr = 0.5
 
+		sn = SigmoidNeuron()
+		sn.mrand(2)
+
+		for t in range(0, trainings):
+			# success=0.0
+			for i in range(0, 2):
+				for j in range(0, 2):
+					x = [i, j]
+					real = i or j
+					res = sn.feed(x) > 0.5
+					diff = abs(real - res)
+					for k in range(0, 2):
+						sn.weights[k] += (lr * diff * x[k])
+
+			# success += (1.0 - diff)
+		# if (t % 10 == 0):
+		#	ratio= (success/(4+0.0))
+		#	print(t,"\t",ratio)
+		return sn
+
+	def test_or(self):
+		sn = self.learn_or()
+		print("weights:\t",sn.weights)
+		print("bias:   \t",sn.bias)
 		for i in range(0,2):
 			for j in range(0,2):
 				x=[i,j]
 				real = i or j
-				result = sn.feed(x)
-				self.assertEqual(real, result)	#print(x,"\t",result)
+				result = sn.feed(x) > 0.5
+				self.assertEqual(real, result)
+				#print(x,"\treal:",real,"\tres:",result)
 
-
+	'''
 	def test_and(self):
 		w = [1.0,1.0]
 		b = -1.5
@@ -97,7 +117,7 @@ class TestPerceptron(unittest.TestCase):
 
 				self.assertEqual(real_summ, res_summ)
 				self.assertEqual(real_carr, res_carr)
-'''
+	'''
 
 
 def sum_nand(x1,x2):
@@ -135,7 +155,7 @@ def plot_learned_2DLine(p,size,x,title):
 
 	for j in range(0, size):
 		rOutput = p.feed(x[j])
-		c = rOutput
+		c = rOutput > 0.5
 		xx = x[j][0]
 		yy = x[j][1]
 		scale = 20
@@ -143,6 +163,10 @@ def plot_learned_2DLine(p,size,x,title):
 
 	plt.title(title)
 	plt.show()
+
+
+
+
 
 
 def learn_2DLine():
@@ -169,8 +193,7 @@ def learn_2DLine():
 			for k in range(0, 2):
 				sn.weights[k] += (lr*diff*x[j][k])
 
-			if(diff==0):
-				success+=1.0
+			success += (1.0 - abs(diff))
 
 		if (i % 10 == 0):
 			ratio= success/(size+0.0)
@@ -179,13 +202,12 @@ def learn_2DLine():
 
 
 
+#sn = learn_2DLine()
 
-sn = learn_2DLine()
 
-'''
 if __name__ == '__main__':
 	learn_2DLine()
 	unittest.main()
-'''
+
 
 
