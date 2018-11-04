@@ -3,8 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="6779900a-43f4-4f2f-9a87-e61d2a074d39" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clase3.py" beforeDir="false" afterPath="$PROJECT_DIR$/clase3.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/clase4.py" beforeDir="false" afterPath="$PROJECT_DIR$/clase4.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/clase1.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/clase2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/clase3.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/clase4.py" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,13 +16,14 @@
   </component>
   <component name="CoverageDataManager">
     <SUITE FILE_PATH="coverage/RedesNeuronales$Unittests_in_clase3_py.coverage" NAME="Unittests in clase3.py Coverage Results" MODIFIED="1540073907632" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/RedesNeuronales$clase4.coverage" NAME="clase4 Coverage Results" MODIFIED="1540083954501" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/RedesNeuronales$clase4.coverage" NAME="clase4 Coverage Results" MODIFIED="1540513630119" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/RedesNeuronales$tarea1.coverage" NAME="tarea1 Coverage Results" MODIFIED="1541106907996" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/RedesNeuronales$Unittests_in_clase2_py.coverage" NAME="Unittests in clase2.py Coverage Results" MODIFIED="1539566788583" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/RedesNeuronales$clase3.coverage" NAME="clase3 Coverage Results" MODIFIED="1540069454494" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/RedesNeuronales$Unittests_in_clase1_py.coverage" NAME="Unittests in clase1.py Coverage Results" MODIFIED="1539407085849" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="CoverageViewManager">
-    <option name="myElementSize" value="455" />
+    <option name="myElementSize" value="326" />
   </component>
   <component name="DatabaseView">
     <option name="SHOW_INTERMEDIATE" value="true" />
@@ -75,42 +78,77 @@
         </counts>
       </usages-collector>
     </session>
+    <session id="-67628160">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="10" />
+          <entry key="project.open.time.0" value="1" />
+          <entry key="project.open.time.5" value="4" />
+          <entry key="project.open.time.6" value="2" />
+          <entry key="project.open.time.7" value="2" />
+          <entry key="project.open.time.9" value="1" />
+          <entry key="project.opened" value="10" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="py" value="1807" />
+          <entry key="tarea1" value="98" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="Python" value="1905" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="py" value="8" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="Python" value="8" />
+        </counts>
+      </usages-collector>
+    </session>
+    <session id="565124021">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.closed" value="2" />
+          <entry key="project.open.time.0" value="1" />
+          <entry key="project.open.time.5" value="1" />
+          <entry key="project.opened" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="py" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="Python" value="1" />
+        </counts>
+      </usages-collector>
+    </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="450">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/clase4.py">
+        <entry file="file://$PROJECT_DIR$/clase1_perceptron.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="4041">
-              <caret line="221" selection-start-line="221" selection-end-line="221" />
-              <folding>
-                <element signature="e#0#15#0" expanded="true" />
-                <element signature="e#4685#5444#0" />
-                <marker date="1540083954498" expanded="true" signature="6775:6952" ph="..." />
-                <marker date="1540083954498" expanded="true" signature="6966:6968" ph="..." />
-              </folding>
+            <state relative-caret-position="288">
+              <caret line="12" column="25" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/clase3.py">
+        <entry file="file://$PROJECT_DIR$/clase3_sigmoidNeuron.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1218">
+            <state relative-caret-position="744">
               <caret line="37" column="24" selection-start-line="37" selection-start-column="24" selection-end-line="37" selection-end-column="24" />
-              <folding>
-                <element signature="e#0#15#0" expanded="true" />
-                <marker date="1540084080846" expanded="true" signature="2961:2964" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/clase2.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="11" selection-end-line="1" />
             </state>
           </provider>
         </entry>
@@ -133,8 +171,10 @@
       <list>
         <option value="$PROJECT_DIR$/clase1.py" />
         <option value="$PROJECT_DIR$/clase2.py" />
-        <option value="$PROJECT_DIR$/clase4.py" />
         <option value="$PROJECT_DIR$/clase3.py" />
+        <option value="$PROJECT_DIR$/clase4.py" />
+        <option value="$PROJECT_DIR$/clase4_neuralNetwork.py" />
+        <option value="$PROJECT_DIR$/tarea1.py" />
       </list>
     </option>
   </component>
@@ -144,28 +184,27 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="47" />
-    <option name="width" value="1920" />
-    <option name="height" value="2000" />
+  <component name="ProjectFrameBounds">
+    <option name="width" value="1926" />
+    <option name="height" value="2106" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="RedesNeuronales" type="b2602c69:ProjectViewProjectNode" />
-              <item name="RedesNeuronales" type="462c0819:PsiDirectoryNode" />
+              <item name="Clases" type="b2602c69:ProjectViewProjectNode" />
+              <item name="Clases" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -219,6 +258,9 @@
       <module name="RedesNeuronales" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
@@ -256,37 +298,51 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Unittests in clase1.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration name="clase4_neuralNetwork" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="RedesNeuronales" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/clase1.py&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/clase4_neuralNetwork.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Unittests in clase2.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration name="tarea1" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="RedesNeuronales" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
       <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/clase2.py&quot;" />
-      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tarea1.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="true" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="Unittests in clase3.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration name="Unittests in /mnt/E22433B824338F13/2018/RedesNeuronales/clase3.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="RedesNeuronales" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -302,19 +358,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python tests.Unittests in clase2.py" />
-      <item itemvalue="Python tests.Unittests in clase3.py" />
+      <item itemvalue="Python tests.Unittests in /mnt/E22433B824338F13/2018/RedesNeuronales/clase3.py" />
       <item itemvalue="Python.clase4" />
-      <item itemvalue="Python tests.Unittests in clase1.py" />
       <item itemvalue="Python.clase3" />
+      <item itemvalue="Python.tarea1" />
+      <item itemvalue="Python.clase4_neuralNetwork" />
     </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python.clase3" />
+        <item itemvalue="Python.tarea1" />
+        <item itemvalue="Python.clase4_neuralNetwork" />
         <item itemvalue="Python.clase4" />
-        <item itemvalue="Python tests.Unittests in clase3.py" />
-        <item itemvalue="Python tests.Unittests in clase2.py" />
-        <item itemvalue="Python tests.Unittests in clase1.py" />
+        <item itemvalue="Python tests.Unittests in /mnt/E22433B824338F13/2018/RedesNeuronales/clase3.py" />
       </list>
     </recent_temporary>
   </component>
@@ -364,15 +420,15 @@
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-6" y="0" width="3852" height="2112" extended-state="6" />
+    <frame x="0" y="0" width="1926" height="2106" extended-state="0" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.08059385" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.31581798" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Concurrent Activities Diagram" order="0" weight="0.32967606" />
+      <window_info anchor="bottom" id="Concurrent Activities Diagram" order="0" weight="0.32966456" />
       <window_info anchor="bottom" id="Message" order="1" />
-      <window_info anchor="bottom" id="Find" order="2" />
-      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.49945828" weight="0.2941484" />
+      <window_info anchor="bottom" id="Find" order="2" weight="0.32967606" />
+      <window_info anchor="bottom" id="Run" order="3" sideWeight="0.49945828" weight="0.29205853" />
       <window_info anchor="bottom" id="Debug" order="4" weight="0.39916405" />
       <window_info anchor="bottom" id="Cvs" order="5" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="6" weight="0.4" />
@@ -382,14 +438,14 @@
       <window_info anchor="bottom" id="Database Changes" order="10" show_stripe_button="false" />
       <window_info anchor="bottom" id="Event Log" order="11" sideWeight="0.5005417" side_tool="true" weight="0.2941484" />
       <window_info anchor="bottom" id="Terminal" order="12" weight="0.32985386" />
-      <window_info anchor="bottom" id="Python Console" order="13" visible="true" weight="0.29571578" />
-      <window_info anchor="right" id="Coverage" sideWeight="0.50407106" side_tool="true" weight="0.24151644" />
+      <window_info active="true" anchor="bottom" id="Python Console" order="13" visible="true" weight="0.2966457" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
-      <window_info active="true" anchor="right" id="SciView" order="3" sideWeight="0.49592894" visible="true" weight="0.24151644" />
+      <window_info anchor="right" id="SciView" order="3" sideWeight="0.4899479" weight="0.3163597" />
       <window_info anchor="right" id="Database" order="4" weight="0.3299025" />
-      <window_info anchor="right" x="0" y="0" width="428" height="1914" id="Documentation" order="5" sideWeight="0.50703186" side_tool="true" weight="0.556338" />
+      <window_info anchor="right" x="0" y="0" width="428" height="1914" id="Documentation" order="5" sideWeight="0.51005214" side_tool="true" weight="0.3163597" />
+      <window_info anchor="right" id="Coverage" order="6" sideWeight="0.50407106" side_tool="true" weight="0.24106176" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -406,13 +462,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/clase1.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="3" column="17" selection-start-line="3" selection-start-column="17" selection-end-line="3" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/clase1.py" />
     <entry file="file://$USER_HOME$/anaconda3/lib/python3.6/random.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="370">
@@ -420,34 +470,43 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/clase2.py">
+    <entry file="file://$PROJECT_DIR$/clase3.py" />
+    <entry file="file://$PROJECT_DIR$/clase4.py" />
+    <entry file="file://$PROJECT_DIR$/clase1_.py" />
+    <entry file="file://$PROJECT_DIR$/clase2.py" />
+    <entry file="file://$USER_HOME$/anaconda3/lib/python3.6/site-packages/sklearn/metrics/ranking.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="11" selection-end-line="1" />
+        <state relative-caret-position="437">
+          <caret line="346" selection-start-line="346" selection-end-line="346" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/clase4.py">
+    <entry file="file://$USER_HOME$/anaconda3/lib/python3.6/site-packages/pandas/core/series.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4041">
-          <caret line="221" selection-start-line="221" selection-end-line="221" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-            <element signature="e#4685#5444#0" />
-            <marker date="1540083954498" expanded="true" signature="6775:6952" ph="..." />
-            <marker date="1540083954498" expanded="true" signature="6966:6968" ph="..." />
-          </folding>
+        <state relative-caret-position="437">
+          <caret line="622" selection-start-line="622" selection-end-line="622" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/clase3.py">
+    <entry file="file://$PROJECT_DIR$/tarea1.py" />
+    <entry file="file://$PROJECT_DIR$/clase4_neuralNetwork.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1218">
+        <state relative-caret-position="1159">
+          <caret line="374" selection-start-line="374" selection-end-line="374" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/clase1_perceptron.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="12" column="25" selection-start-line="12" selection-start-column="25" selection-end-line="12" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/clase3_sigmoidNeuron.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="744">
           <caret line="37" column="24" selection-start-line="37" selection-start-column="24" selection-end-line="37" selection-end-column="24" />
-          <folding>
-            <element signature="e#0#15#0" expanded="true" />
-            <marker date="1540084080846" expanded="true" signature="2961:2964" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>

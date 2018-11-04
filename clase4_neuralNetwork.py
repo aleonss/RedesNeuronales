@@ -2,8 +2,11 @@ import unittest
 import random
 import math
 import numpy as np
+from sklearn.metrics import precision_score,recall_score
 
 import matplotlib.pyplot as plt
+
+
 
 class SigmoidNeuron:
 
@@ -29,6 +32,12 @@ class SigmoidNeuron:
 		for j, w in enumerate(self.weights):
 			self.weights[j] += (rate * delta * input[j])
 		self.bias += (rate * delta)
+
+	def to_str(self):
+		res = "\tweights "+ self.weights.__str__()+"\n"
+		res += "\t\tbias "+ self.bias.__str__()+"\n"
+
+		return res
 
 
 class NeuronLayer:
@@ -65,7 +74,12 @@ class NeuronLayer:
 			res.append(n.bias)
 		return res
 
-
+	def to_str(self):
+		res = ""
+		for i,n in enumerate(self.neurons):
+			res+= "\tn"+i.__str__() +"\n\t"
+			res+= n.to_str()
+		return res
 
 
 class NeuralNetwork:
@@ -142,6 +156,13 @@ class NeuralNetwork:
 			res.append(l.get_bias())
 		return res
 
+	def to_str(self):
+		res = ""
+		for i,l in enumerate(self.layers):
+			res+= "layer "+i.__str__() +"\n"
+			res+= l.to_str()
+		return res
+
 
 
 
@@ -194,9 +215,9 @@ def make_layers(nneurons):
 '''
 make_layers([2,4,2,1])
 layers = [
-	NeuronLayer(2, 4), # 2 input, # 4 neuron
-	NeuronLayer(4, 2), # 4 input, # 2 neuron
-	NeuronLayer(2, 1), # 2 input, # 1 neuron
+	NeuronLayer(2, 4),  # 2 input, # 4 neuron
+	NeuronLayer(4, 2),  # 4 input, # 2 neuron
+	NeuronLayer(2, 1),  # 2 input, # 1 neuron
 ]
 '''
 
@@ -269,16 +290,18 @@ def logical_inputs(size):
 		inputs.append([xx,xy])
 	return inputs
 
+
+
+
+
+#test_xor()
+
 def learn_line():
 	size = 4
 	trainings= 1000
 	learn_rate = 0.4
-	layers = [
-		NeuronLayer(2, 5),
-		NeuronLayer(5, 2),
-		NeuronLayer(2, 1),
-	]
-	layers = make_layers([2,5,2,1])
+
+	layers = make_layers([2,10,5,1])
 	nn = NeuralNetwork(layers)
 
 	success = 0.0
@@ -303,8 +326,8 @@ def learn_line():
 
 def test_line():
 	nn =learn_line()
-	print("weights:\t", nn.get_weight())
-	print("bias:   \t", nn.get_bias())
+	print(nn.to_str())
+
 
 	size=100
 	x, dOutput = realVal_2DLine(size)
@@ -313,8 +336,8 @@ def test_line():
 
 def test_or():
 	nn = learn_or()
-	print("weights:\t", nn.get_weight())
-	print("bias:   \t", nn.get_bias())
+	print(nn.to_str())
+
 	for i in range(0,2):
 		for j in range(0,2):
 			x=[i,j]
@@ -328,11 +351,28 @@ def test_or():
 
 def test_xor():
 	nn = learn_xor()
-	print("weights:\t", nn.get_weight())
-	print("bias:   \t", nn.get_bias())
+	print(nn.to_str())
+
 	size = 100
+	xreal= xpred=[]
+	for s in range(0, size):
+
+		i = random.randint(0, 1)
+		j = random.randint(0, 1)
+		x = [i, j]
+
+		real = np.logical_xor(i, j)
+		res, outputs = nn.forward_feeding(x)
+
+		xreal.append(real)
+		xpred.append(res[0] > 0.5)
+
+	print("precision:\t", precision_score(xreal,xpred,))
+	print("recall:   \t", recall_score(xreal,xpred))
 	x = logical_inputs(size)
 	plot_nn(nn, size, x, "xor")
+
+
 
 test_or()
 test_line()
